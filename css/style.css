@@ -32,8 +32,26 @@
 }
 
 .test-body-form-button {
+  cursor: pointer;
   padding: 10px 15px;
   border: 1px solid #00bfff;
   color: #00bfff;
   font-weight: 600;
+}
+
+.warning {
+  color: #d9470d;
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 150%;
+  text-shadow: #000000 0px 1px 1px;
+}
+
+.fz-15 {
+  font-size: 15px;
+}
+
+.red {
+  color: red;
+  text-shadow: none;
 }
