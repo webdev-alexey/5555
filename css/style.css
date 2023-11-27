@@ -1,0 +1,39 @@
+.test-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.test-body-title {
+  font-size: 29px;
+  font-family: "Verdana", "Helvetica", sans-serif;
+}
+
+.test-block-one {
+  margin-bottom: 25px;
+}
+
+.test-body-form-area {
+  border: 2px solid #00bfff;
+  border-radius: 15px;
+  padding: 10px 15px;
+  width: 500px;
+  height: 250px;
+}
+
+.test-block-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.test-body-form-button {
+  padding: 10px 15px;
+  border: 1px solid #00bfff;
+  color: #00bfff;
+  font-weight: 600;
+}
