@@ -15,7 +15,21 @@ function testFunc(value) {
 
   newBlock.classList.add("new-block");
   newPar.classList.add("newPar");
-  newPar.textContent = resText;
+  newPar.innerHTML = resText;
+  for (var i = 0, l = newPar.childNodes.length; i < l; i++) {
+    if (newPar.childNodes[i].hasChildNodes() && newPar.childNodes.length > 1) {
+      newPar.childNodes[i].innerHTML = changeQuotes(
+        newPar.childNodes[i].innerHTML,
+      );
+    } else {
+      newPar.childNodes[i].textContent = newPar.childNodes[i].textContent
+        .replace(/\x27/g, "\x22")
+        .replace(/(\w)\x22(\w)/g, "$1\x27$2")
+        .replace(/(^)\x22(\s)/g, "$1»$2")
+        .replace(/(^|\s|\()"/g, "$1«")
+        .replace(/"(\;|\!|\?|\:|\.|\,|$|\)|\s)/g, "»$1");
+    }
+  }
 
   newBlock.append(newPar);
   testBody.append(newBlock);
